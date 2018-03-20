@@ -1,0 +1,4 @@
+void print(const Arg1& a1, const Args&... args){
+    cerr << a1 << ' ';
+    print(args...);
+}

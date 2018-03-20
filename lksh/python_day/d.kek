@@ -1,0 +1,36 @@
+import random
+import math
+
+
+def check(a, p):
+    a = pow(a, q, p)
+    if a == 1:
+        return 1
+    for i in range(power2):
+        if a % p == p - 1:
+            return 1
+        a *= a
+        a %= p
+    return 0
+
+
+n = int(input())
+powers = [1]
+power2 = 0
+while (powers[-1] <= n - 1):
+    powers.append(powers[-1] * 2)
+    power2 += 1
+q = (n - 1) % powers[power2]
+if n == 2:
+    print('YES')
+    exit(0)
+assert n != 1
+if not n & 1:
+    print('NO')
+    exit(0)
+for i in range(1000):
+    a = random.randint(2, n - 1)
+    if math.gcd(a, n) > 1 or not check(a, n):
+        print('NO')
+        exit(0)
+print('YES')

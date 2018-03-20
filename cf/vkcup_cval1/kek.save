@@ -1,0 +1,956 @@
+ЙIn file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h: В конкретизации «constexpr const _Tp& std::min(const _Tp&, const _Tp&) [с _Tp = Project_]»:
+c.cpp:36:41:   required from here
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: ошибка: no match for «operator<» (operand types are «const Project_» and «const Project_»)
+       if (__b < __a)
+           ~~~~^~~~~
+c.cpp:16:10: замечание: candidate: bool Project_::operator<(Project_&) const <near match>
+     bool operator< (Project_& ot) const{
+          ^~~~~~~~
+c.cpp:16:10: замечание:   conversion of argument 1 would be ill-formed:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: ошибка: binding reference of type «Project_&» to «const Project_» discards qualifiers
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/bits/stl_algobase.h:64:0,
+                 from /usr/include/c++/7.3.0/bits/char_traits.h:39,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_pair.h:449:5: замечание: candidate: template<class _T1, class _T2> constexpr bool std::operator<(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
+     operator<(const pair<_T1, _T2>& __x, const pair<_T1, _T2>& __y)
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/stl_pair.h:449:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::pair<_T1, _T2>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/7.3.0/bits/char_traits.h:39,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_iterator.h:305:5: замечание: candidate: template<class _Iterator> bool std::operator<(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
+     operator<(const reverse_iterator<_Iterator>& __x,
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/stl_iterator.h:305:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::reverse_iterator<_Iterator>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/7.3.0/bits/char_traits.h:39,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_iterator.h:343:5: замечание: candidate: template<class _IteratorL, class _IteratorR> bool std::operator<(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_IteratorR>&)
+     operator<(const reverse_iterator<_IteratorL>& __x,
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/stl_iterator.h:343:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::reverse_iterator<_Iterator>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/7.3.0/bits/char_traits.h:39,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_iterator.h:1142:5: замечание: candidate: template<class _IteratorL, class _IteratorR> bool std::operator<(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorR>&)
+     operator<(const move_iterator<_IteratorL>& __x,
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/stl_iterator.h:1142:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::move_iterator<_IteratorL>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/bits/stl_algobase.h:67:0,
+                 from /usr/include/c++/7.3.0/bits/char_traits.h:39,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_iterator.h:1148:5: замечание: candidate: template<class _Iterator> bool std::operator<(const std::move_iterator<_IteratorL>&, const std::move_iterator<_IteratorL>&)
+     operator<(const move_iterator<_Iterator>& __x,
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/stl_iterator.h:1148:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::move_iterator<_IteratorL>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/string:52:0,
+                 from /usr/include/c++/7.3.0/bits/locale_classes.h:40,
+                 from /usr/include/c++/7.3.0/bits/ios_base.h:41,
+                 from /usr/include/c++/7.3.0/ios:42,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/basic_string.h:6082:5: замечание: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator<(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/basic_string.h:6082:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/string:52:0,
+                 from /usr/include/c++/7.3.0/bits/locale_classes.h:40,
+                 from /usr/include/c++/7.3.0/bits/ios_base.h:41,
+                 from /usr/include/c++/7.3.0/ios:42,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/basic_string.h:6095:5: замечание: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator<(const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+     operator<(const basic_string<_CharT, _Traits, _Alloc>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/basic_string.h:6095:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/string:52:0,
+                 from /usr/include/c++/7.3.0/bits/locale_classes.h:40,
+                 from /usr/include/c++/7.3.0/bits/ios_base.h:41,
+                 from /usr/include/c++/7.3.0/ios:42,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/basic_string.h:6107:5: замечание: candidate: template<class _CharT, class _Traits, class _Alloc> bool std::operator<(const _CharT*, const std::__cxx11::basic_string<_CharT, _Traits, _Alloc>&)
+     operator<(const _CharT* __lhs,
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/basic_string.h:6107:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   несоответствие типов «const _CharT*» и «Project_»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/bits/ios_base.h:46:0,
+                 from /usr/include/c++/7.3.0/ios:42,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/system_error:208:3: замечание: candidate: bool std::operator<(const std::error_code&, const std::error_code&)
+   operator<(const error_code& __lhs, const error_code& __rhs) noexcept
+   ^~~~~~~~
+/usr/include/c++/7.3.0/system_error:208:3: замечание:   нет известных преобразований для аргумента 1 из «const Project_» в «const std::error_code&»
+/usr/include/c++/7.3.0/system_error:282:3: замечание: candidate: bool std::operator<(const std::error_condition&, const std::error_condition&)
+   operator<(const error_condition& __lhs,
+   ^~~~~~~~
+/usr/include/c++/7.3.0/system_error:282:3: замечание:   нет известных преобразований для аргумента 1 из «const Project_» в «const std::error_condition&»
+In file included from /usr/include/c++/7.3.0/deque:64:0,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:68,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_deque.h:293:5: замечание: candidate: template<class _Tp, class _Ref, class _Ptr> bool std::operator<(const std::_Deque_iterator<_Tp, _Ref, _Ptr>&, const std::_Deque_iterator<_Tp, _Ref, _Ptr>&)
+     operator<(const _Deque_iterator<_Tp, _Ref, _Ptr>& __x,
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/stl_deque.h:293:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::_Deque_iterator<_Tp, _Ref, _Ptr>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/deque:64:0,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:68,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_deque.h:301:5: замечание: candidate: template<class _Tp, class _RefL, class _PtrL, class _RefR, class _PtrR> bool std::operator<(const std::_Deque_iterator<_Tp, _Ref, _Ptr>&, const std::_Deque_iterator<_Tp, _RefR, _PtrR>&)
+     operator<(const _Deque_iterator<_Tp, _RefL, _PtrL>& __x,
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/stl_deque.h:301:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::_Deque_iterator<_Tp, _Ref, _Ptr>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/deque:64:0,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:68,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_deque.h:2276:5: замечание: candidate: template<class _Tp, class _Alloc> bool std::operator<(const std::deque<_Tp, _Alloc>&, const std::deque<_Tp, _Alloc>&)
+     operator<(const deque<_Tp, _Alloc>& __x,
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/stl_deque.h:2276:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::deque<_Tp, _Alloc>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/tuple:39:0,
+                 from /usr/include/c++/7.3.0/functional:54,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:71,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/array:262:5: замечание: candidate: template<class _Tp, long unsigned int _Nm> bool std::operator<(const std::array<_Tp, _Nm>&, const std::array<_Tp, _Nm>&)
+     operator<(const array<_Tp, _Nm>& __a, const array<_Tp, _Nm>& __b)
+     ^~~~~~~~
+/usr/include/c++/7.3.0/array:262:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::array<_Tp, _Nm>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/functional:54:0,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:71,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/tuple:1410:5: замечание: candidate: template<class ... _TElements, class ... _UElements> constexpr bool std::operator<(const std::tuple<_Tps ...>&, const std::tuple<_Elements ...>&)
+     operator<(const tuple<_TElements...>& __t,
+     ^~~~~~~~
+/usr/include/c++/7.3.0/tuple:1410:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::tuple<_Tps ...>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/bits/locale_conv.h:41:0,
+                 from /usr/include/c++/7.3.0/locale:43,
+                 from /usr/include/c++/7.3.0/iomanip:43,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:72,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/unique_ptr.h:717:5: замечание: candidate: template<class _Tp, class _Dp, class _Up, class _Ep> bool std::operator<(const std::unique_ptr<_Tp, _Dp>&, const std::unique_ptr<_Up, _Ep>&)
+     operator<(const unique_ptr<_Tp, _Dp>& __x,
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/unique_ptr.h:717:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::unique_ptr<_Tp, _Dp>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/bits/locale_conv.h:41:0,
+                 from /usr/include/c++/7.3.0/locale:43,
+                 from /usr/include/c++/7.3.0/iomanip:43,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:72,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/unique_ptr.h:728:5: замечание: candidate: template<class _Tp, class _Dp> bool std::operator<(const std::unique_ptr<_Tp, _Dp>&, std::nullptr_t)
+     operator<(const unique_ptr<_Tp, _Dp>& __x, nullptr_t)
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/unique_ptr.h:728:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::unique_ptr<_Tp, _Dp>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/bits/locale_conv.h:41:0,
+                 from /usr/include/c++/7.3.0/locale:43,
+                 from /usr/include/c++/7.3.0/iomanip:43,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:72,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/unique_ptr.h:734:5: замечание: candidate: template<class _Tp, class _Dp> bool std::operator<(std::nullptr_t, const std::unique_ptr<_Tp, _Dp>&)
+     operator<(nullptr_t, const unique_ptr<_Tp, _Dp>& __x)
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/unique_ptr.h:734:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::unique_ptr<_Tp, _Dp>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/list:63:0,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:79,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_list.h:1918:5: замечание: candidate: template<class _Tp, class _Alloc> bool std::operator<(const std::__cxx11::list<_Tp, _Alloc>&, const std::__cxx11::list<_Tp, _Alloc>&)
+     operator<(const list<_Tp, _Alloc>& __x, const list<_Tp, _Alloc>& __y)
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/stl_list.h:1918:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::__cxx11::list<_Tp, _Alloc>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/map:60:0,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:81,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_tree.h:1543:5: замечание: candidate: template<class _Key, class _Val, class _KeyOfValue, class _Compare, class _Alloc> bool std::operator<(const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>&, const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>&)
+     operator<(const _Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>& __x,
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/stl_tree.h:1543:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/map:61:0,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:81,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_map.h:1412:5: замечание: candidate: template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator<(const std::map<_Key, _Tp, _Compare, _Alloc>&, const std::map<_Key, _Tp, _Compare, _Alloc>&)
+     operator<(const map<_Key, _Tp, _Compare, _Alloc>& __x,
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/stl_map.h:1412:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::map<_Key, _Tp, _Compare, _Alloc>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/map:62:0,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:81,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_multimap.h:1078:5: замечание: candidate: template<class _Key, class _Tp, class _Compare, class _Alloc> bool std::operator<(const std::multimap<_Key, _Tp, _Compare, _Alloc>&, const std::multimap<_Key, _Tp, _Compare, _Alloc>&)
+     operator<(const multimap<_Key, _Tp, _Compare, _Alloc>& __x,
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/stl_multimap.h:1078:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::multimap<_Key, _Tp, _Compare, _Alloc>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/bits/shared_ptr.h:52:0,
+                 from /usr/include/c++/7.3.0/memory:81,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:82,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/shared_ptr_base.h:1441:5: замечание: candidate: template<class _Tp, class _Up, __gnu_cxx::_Lock_policy _Lp> bool std::operator<(const std::__shared_ptr<_Tp1, _Lp>&, const std::__shared_ptr<_Tp2, _Lp>&)
+     operator<(const __shared_ptr<_Tp, _Lp>& __a,
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/shared_ptr_base.h:1441:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::__shared_ptr<_Tp1, _Lp>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/bits/shared_ptr.h:52:0,
+                 from /usr/include/c++/7.3.0/memory:81,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:82,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/shared_ptr_base.h:1452:5: замечание: candidate: template<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator<(const std::__shared_ptr<_Tp, _Lp>&, std::nullptr_t)
+     operator<(const __shared_ptr<_Tp, _Lp>& __a, nullptr_t) noexcept
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/shared_ptr_base.h:1452:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::__shared_ptr<_Tp, _Lp>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/bits/shared_ptr.h:52:0,
+                 from /usr/include/c++/7.3.0/memory:81,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:82,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/shared_ptr_base.h:1460:5: замечание: candidate: template<class _Tp, __gnu_cxx::_Lock_policy _Lp> bool std::operator<(std::nullptr_t, const std::__shared_ptr<_Tp, _Lp>&)
+     operator<(nullptr_t, const __shared_ptr<_Tp, _Lp>& __a) noexcept
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/shared_ptr_base.h:1460:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::__shared_ptr<_Tp, _Lp>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/memory:81:0,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:82,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/shared_ptr.h:398:5: замечание: candidate: template<class _Tp, class _Up> bool std::operator<(const std::shared_ptr<_Tp>&, const std::shared_ptr<_Up>&)
+     operator<(const shared_ptr<_Tp>& __a, const shared_ptr<_Up>& __b) noexcept
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/shared_ptr.h:398:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::shared_ptr<_Tp>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/memory:81:0,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:82,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/shared_ptr.h:408:5: замечание: candidate: template<class _Tp> bool std::operator<(const std::shared_ptr<_Tp>&, std::nullptr_t)
+     operator<(const shared_ptr<_Tp>& __a, nullptr_t) noexcept
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/shared_ptr.h:408:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::shared_ptr<_Tp>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/memory:81:0,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:82,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/shared_ptr.h:416:5: замечание: candidate: template<class _Tp> bool std::operator<(std::nullptr_t, const std::shared_ptr<_Tp>&)
+     operator<(nullptr_t, const shared_ptr<_Tp>& __a) noexcept
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/shared_ptr.h:416:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::shared_ptr<_Tp>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/vector:64:0,
+                 from /usr/include/c++/7.3.0/queue:61,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:86,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_vector.h:1613:5: замечание: candidate: template<class _Tp, class _Alloc> bool std::operator<(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)
+     operator<(const vector<_Tp, _Alloc>& __x, const vector<_Tp, _Alloc>& __y)
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/stl_vector.h:1613:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::vector<_Tp, _Alloc>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/queue:64:0,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:86,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_queue.h:336:5: замечание: candidate: template<class _Tp, class _Seq> bool std::operator<(const std::queue<_Tp, _Seq>&, const std::queue<_Tp, _Seq>&)
+     operator<(const queue<_Tp, _Seq>& __x, const queue<_Tp, _Seq>& __y)
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/stl_queue.h:336:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::queue<_Tp, _Seq>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/set:61:0,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:87,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_set.h:930:5: замечание: candidate: template<class _Key, class _Compare, class _Alloc> bool std::operator<(const std::set<_Key, _Compare, _Alloc>&, const std::set<_Key, _Compare, _Alloc>&)
+     operator<(const set<_Key, _Compare, _Alloc>& __x,
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/stl_set.h:930:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::set<_Key, _Compare, _Alloc>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/set:62:0,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:87,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_multiset.h:913:5: замечание: candidate: template<class _Key, class _Compare, class _Alloc> bool std::operator<(const std::multiset<_Key, _Compare, _Alloc>&, const std::multiset<_Key, _Compare, _Alloc>&)
+     operator<(const multiset<_Key, _Compare, _Alloc>& __x,
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/stl_multiset.h:913:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::multiset<_Key, _Compare, _Alloc>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/stack:61:0,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:89,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_stack.h:311:5: замечание: candidate: template<class _Tp, class _Seq> bool std::operator<(const std::stack<_Tp, _Seq>&, const std::stack<_Tp, _Seq>&)
+     operator<(const stack<_Tp, _Seq>& __x, const stack<_Tp, _Seq>& __y)
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/stl_stack.h:311:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::stack<_Tp, _Seq>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/valarray:592:0,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:95,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/valarray_after.h:416:5: замечание: candidate: template<class _Dom1, class _Dom2> std::_Expr<std::_BinClos<std::__less, std::_Expr, std::_Expr, _Dom1, _Dom2>, typename std::__fun<std::__less, typename _Dom1::value_type>::result_type> std::operator<(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::_Expr<_Dom2, typename _Dom2::value_type>&)
+     _DEFINE_EXPR_BINARY_OPERATOR(<, __less)
+     ^
+/usr/include/c++/7.3.0/bits/valarray_after.h:416:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::_Expr<_Dom1, typename _Dom1::value_type>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/valarray:592:0,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:95,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/valarray_after.h:416:5: замечание: candidate: template<class _Dom> std::_Expr<std::_BinClos<std::__less, std::_Expr, std::_Constant, _Dom, typename _Dom::value_type>, typename std::__fun<std::__less, typename _Dom1::value_type>::result_type> std::operator<(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const typename _Dom::value_type&)
+     _DEFINE_EXPR_BINARY_OPERATOR(<, __less)
+     ^
+/usr/include/c++/7.3.0/bits/valarray_after.h:416:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::_Expr<_Dom1, typename _Dom1::value_type>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/valarray:592:0,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:95,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/valarray_after.h:416:5: замечание: candidate: template<class _Dom> std::_Expr<std::_BinClos<std::__less, std::_Constant, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__less, typename _Dom1::value_type>::result_type> std::operator<(const typename _Dom::value_type&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)
+     _DEFINE_EXPR_BINARY_OPERATOR(<, __less)
+     ^
+/usr/include/c++/7.3.0/bits/valarray_after.h:416:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::_Expr<_Dom1, typename _Dom1::value_type>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/valarray:592:0,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:95,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/valarray_after.h:416:5: замечание: candidate: template<class _Dom> std::_Expr<std::_BinClos<std::__less, std::_Expr, std::_ValArray, _Dom, typename _Dom::value_type>, typename std::__fun<std::__less, typename _Dom1::value_type>::result_type> std::operator<(const std::_Expr<_Dom1, typename _Dom1::value_type>&, const std::valarray<typename _Dom::value_type>&)
+     _DEFINE_EXPR_BINARY_OPERATOR(<, __less)
+     ^
+/usr/include/c++/7.3.0/bits/valarray_after.h:416:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::_Expr<_Dom1, typename _Dom1::value_type>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/valarray:592:0,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:95,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/valarray_after.h:416:5: замечание: candidate: template<class _Dom> std::_Expr<std::_BinClos<std::__less, std::_ValArray, std::_Expr, typename _Dom::value_type, _Dom>, typename std::__fun<std::__less, typename _Dom1::value_type>::result_type> std::operator<(const std::valarray<typename _Dom::value_type>&, const std::_Expr<_Dom1, typename _Dom1::value_type>&)
+     _DEFINE_EXPR_BINARY_OPERATOR(<, __less)
+     ^
+/usr/include/c++/7.3.0/bits/valarray_after.h:416:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::_Expr<_Dom1, typename _Dom1::value_type>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:95:0,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/valarray:1186:1: замечание: candidate: template<class _Tp> std::_Expr<std::_BinClos<std::__less, std::_ValArray, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__less, _Tp>::result_type> std::operator<(const std::valarray<_Tp>&, const std::valarray<_Tp>&)
+ _DEFINE_BINARY_OPERATOR(<, __less)
+ ^
+/usr/include/c++/7.3.0/valarray:1186:1: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::valarray<_Tp>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:95:0,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/valarray:1186:1: замечание: candidate: template<class _Tp> std::_Expr<std::_BinClos<std::__less, std::_ValArray, std::_Constant, _Tp, _Tp>, typename std::__fun<std::__less, _Tp>::result_type> std::operator<(const std::valarray<_Tp>&, const _Tp&)
+ _DEFINE_BINARY_OPERATOR(<, __less)
+ ^
+/usr/include/c++/7.3.0/valarray:1186:1: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::valarray<_Tp>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:95:0,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/valarray:1186:1: замечание: candidate: template<class _Tp> std::_Expr<std::_BinClos<std::__less, std::_Constant, std::_ValArray, _Tp, _Tp>, typename std::__fun<std::__less, _Tp>::result_type> std::operator<(const _Tp&, const std::valarray<_Tp>&)
+ _DEFINE_BINARY_OPERATOR(<, __less)
+ ^
+/usr/include/c++/7.3.0/valarray:1186:1: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::valarray<_Tp>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/forward_list:38:0,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:104,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/forward_list.h:1391:5: замечание: candidate: template<class _Tp, class _Alloc> bool std::operator<(const std::forward_list<_Tp, _Alloc>&, const std::forward_list<_Tp, _Alloc>&)
+     operator<(const forward_list<_Tp, _Alloc>& __lx,
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/forward_list.h:1391:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::forward_list<_Tp, _Alloc>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/future:39:0,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:105,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/thread:284:3: замечание: candidate: bool std::operator<(std::thread::id, std::thread::id)
+   operator<(thread::id __x, thread::id __y) noexcept
+   ^~~~~~~~
+/usr/include/c++/7.3.0/thread:284:3: замечание:   нет известных преобразований для аргумента 1 из «const Project_» в «std::thread::id»
+In file included from /usr/include/c++/7.3.0/regex:62:0,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:110,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/regex.h:1429:5: замечание: candidate: template<class _Bi_iter> bool std::__cxx11::operator<(const std::__cxx11::sub_match<_BiIter>&, const typename std::iterator_traits<_Iter>::value_type&)
+     operator<(const sub_match<_Bi_iter>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/regex.h:1429:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::__cxx11::sub_match<_BiIter>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/regex:62:0,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:110,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/regex.h:1349:5: замечание: candidate: template<class _Bi_iter> bool std::__cxx11::operator<(const typename std::iterator_traits<_Iter>::value_type&, const std::__cxx11::sub_match<_BiIter>&)
+     operator<(typename iterator_traits<_Bi_iter>::value_type const& __lhs,
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/regex.h:1349:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::__cxx11::sub_match<_BiIter>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/regex:62:0,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:110,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/regex.h:1272:5: замечание: candidate: template<class _Bi_iter> bool std::__cxx11::operator<(const std::__cxx11::sub_match<_BiIter>&, const typename std::iterator_traits<_Iter>::value_type*)
+     operator<(const sub_match<_Bi_iter>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/regex.h:1272:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::__cxx11::sub_match<_BiIter>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/regex:62:0,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:110,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/regex.h:1198:5: замечание: candidate: template<class _Bi_iter> bool std::__cxx11::operator<(const typename std::iterator_traits<_Iter>::value_type*, const std::__cxx11::sub_match<_BiIter>&)
+     operator<(typename iterator_traits<_Bi_iter>::value_type const* __lhs,
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/regex.h:1198:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::__cxx11::sub_match<_BiIter>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/regex:62:0,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:110,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/regex.h:1121:5: замечание: candidate: template<class _Bi_iter, class _Ch_traits, class _Ch_alloc> bool std::__cxx11::operator<(const std::__cxx11::sub_match<_BiIter>&, std::__cxx11::__sub_match_string<_Bi_iter, _Ch_traits, _Ch_alloc>&)
+     operator<(const sub_match<_Bi_iter>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/regex.h:1121:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::__cxx11::sub_match<_BiIter>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/regex:62:0,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:110,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/regex.h:1041:5: замечание: candidate: template<class _Bi_iter, class _Ch_traits, class _Ch_alloc> bool std::__cxx11::operator<(std::__cxx11::__sub_match_string<_Bi_iter, _Ch_traits, _Ch_alloc>&, const std::__cxx11::sub_match<_BiIter>&)
+     operator<(const __sub_match_string<_Bi_iter, _Ch_traits, _Ch_alloc>& __lhs,
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/regex.h:1041:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «std::__cxx11::__sub_match_string<_Bi_iter, _Ch_traits, _Ch_alloc>»
+       if (__b < __a)
+           ~~~~^~~~~
+In file included from /usr/include/c++/7.3.0/regex:62:0,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:110,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/regex.h:962:5: замечание: candidate: template<class _BiIter> bool std::__cxx11::operator<(const std::__cxx11::sub_match<_BiIter>&, const std::__cxx11::sub_match<_BiIter>&)
+     operator<(const sub_match<_BiIter>& __lhs, const sub_match<_BiIter>& __rhs)
+     ^~~~~~~~
+/usr/include/c++/7.3.0/bits/regex.h:962:5: замечание:   вывод/подстановка аргумента шаблона неудачна:
+In file included from /usr/include/c++/7.3.0/bits/char_traits.h:39:0,
+                 from /usr/include/c++/7.3.0/ios:40,
+                 from /usr/include/c++/7.3.0/istream:38,
+                 from /usr/include/c++/7.3.0/sstream:38,
+                 from /usr/include/c++/7.3.0/complex:45,
+                 from /usr/include/c++/7.3.0/ccomplex:39,
+                 from /usr/include/c++/7.3.0/x86_64-pc-linux-gnu/bits/stdc++.h:52,
+                 from c.cpp:1:
+/usr/include/c++/7.3.0/bits/stl_algobase.h:200:15: замечание:   «const Project_» не является производным от «const std::__cxx11::sub_match<_BiIter>»
+       if (__b < __a)
+           ~~~~^~~~~
