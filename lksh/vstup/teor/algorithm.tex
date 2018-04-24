@@ -1,0 +1,12 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage[T1,T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+
+\begin{document}
+Максимальная глубина рекурсии равна $log_2\ n$. На $i$-том уровне рекурсии массив будет длины $\frac{n}{2^i}$, так как на каждом уровне рекурсии длина массива уменьшается в два раза (На нулевом уровне длина массива будет n). Всего вызовов $i$-того уровня будет ровно $3^i$, так как на $i-1$ уровне будет сделано 3 вызова $i$-того уровня. Соответственно, итоговая асимптотика для $i$-того уровня равна $\mathcal{O}(3^i(\frac{n}{2^i})^2)$, а суммарная асимптотика --- сумма асимптотик для каждого уровня, то есть $$\sum\limits_{i=0}^{log_2 n} \mathcal{O}(3^i(\frac{n}{2^i})^2) = \mathcal{O}(\sum\limits_{i=0}^{log_2 n} (3^i(\frac{n}{2^i})^2) = \mathcal{O}(n^2\sum\limits_{i=0}^{log_2 n} (\frac{3}{4})^i)$$. \parПо формуле суммы бесконечно убывающей геометрической прогрессии $\sum\limits_{k=0}^{\infty} (\frac{3}{4})^k = 4$, поэтому опустим её. Итоговый ответ:$$\mathcal{O}(n ^ 2)$$
+
+\end{document}
