@@ -5,7 +5,8 @@ LOG_FILE = sys.stdout  # file to log, setting by main file
 
 names = {'': 0}  # Stores all names -> indexes, Numeration from 1
 names_list = ['']  # Stores all names sorted with id, Numeration from 1
-names_in_ids = {}  # for each name stores id of clients to answer
+names_in_ids = {'': []}  # for each name stores id of clients to answer
+clients_names = {}  # for each clients stores all names in their tracing list
 exists = {}  # for each name stores parallel and session
 parallels = ['AA', 'A-ML', "A'", "B", "B'", "C.python", "C.C++", "C'", "D", "P"]  # names of parallels
 sessions = ["Июль", "Август"]  # name of sessions
@@ -30,13 +31,13 @@ def read_all():
         with open(PARALLELS_FILE) as parallels_file:
             parallels = parallels_file.readline().rstrip().split()
     except Exception as e:
-        print(e, file=LOG_FILE)
-
+        print(e, file=LOG_FILE, flush=True)
+    print('Norm')
     try:  # Read Session
         with open(SESSIONS_FILE) as session_file:
             sessions = session_file.readline().rstrip().split()
     except Exception as e:
-        print(e, file=LOG_FILE)
+        print(e, file=LOG_FILE, flush=True)
 
     with open(NAMES_FILE) as names_file:  # Read all names
         name = names_file.readline().rstrip()
@@ -49,8 +50,12 @@ def read_all():
             name = names_file.readline().rstrip()
 
     with open(NAME_ID_FILE) as names_in_ids_file:  # Read all men, who needs some name
-        for i in range(len(names)):
+        for i in range(1, len(names)):
             names_in_ids[i] = list(map(int, names_in_ids_file.readline().split()))
+            for j in names_in_ids[i]:
+                tmp = clients_names.get(j, set())
+                tmp.add(i)
+                clients_names[j] = tmp
 
 
 def write_new(name: str, id: int, bot: telegram.Bot):
@@ -61,13 +66,20 @@ def write_new(name: str, id: int, bot: telegram.Bot):
     :param bot: bot which used to senc messages
     :return: True if answered now else False
     """
-    print('Adding {}(id {}) to {}'.format(name, get_id(name), id), file=LOG_FILE)
-    names_in_ids[get_id(name)] = names_in_ids.get(get_id(name), []) + [id]
-    if get_id(name) in exists:  # If we can answer now, let's do it
-        last_update.append(get_id(name))
-        print_update(bot)
+    try:
+        print('Adding {}(id {}) to {}'.format(name, get_id(name), id), file=LOG_FILE, flush=True)
+        names_in_ids[get_id(name)] = names_in_ids.get(get_id(name), []) + [id]
+        tmp = clients_names.get(id, set())
+        tmp.add(get_id(name))
+        clients_names[id] = tmp
+        if get_id(name) in exists:  # If we can answer now, let's do it
+            last_update.append(get_id(name))
+            print_update(bot)
+            return True
+        return False
+    except Exception as e:
+        print(e)
         return True
-    return False
 
 
 def add_name(name: str):
@@ -91,7 +103,7 @@ def get_parallel(parallel: str):
         return parallels.index(parallel)
     except Exception as e:
         parallels.append(parallel)
-        print(e, file=LOG_FILE)
+        print(e, file=LOG_FILE, flush=True)
         return len(parallels) - 1
 
 
@@ -105,7 +117,7 @@ def get_session(session: str):
         return sessions.index(session)
     except Exception as e:
         sessions.append(session)
-        print(e, file=LOG_FILE)
+        print(e, file=LOG_FILE, flush=True)
         return len(sessions) - 1
 
 
@@ -115,9 +127,8 @@ def get_id(name: str):
     :param name: Name of man
     :return: name's id
     """
-    name = name.lower()
     add_name(name)
-    return names[name]
+    return names[name.lower()]
 
 
 def save():
@@ -126,14 +137,14 @@ def save():
     :return: None
     """
     with open(NAMES_FILE, 'w') as names_file:  # Save man's name, parallel and session
-        for name in names_list:
+        for name in names_list[1:]:
             print(name, file=names_file)
             print(parallels[exists[get_id(name)][0]] if get_id(name) in exists else 'None',
                   sessions[exists[get_id(name)][1]] if get_id(name) in exists else 'None', file=names_file)
 
     with open(NAME_ID_FILE, 'w') as names_file:  # Save ids of mans who need men
-        for name in names_in_ids.keys():
-            print(*names_in_ids[name], file=names_file)
+        for name in names_list[1:]:
+            print(*names_in_ids[get_id(name)], file=names_file)
 
     with open(PARALLELS_FILE, 'w') as parallels_file:  # Save parallels
         print(*parallels, file=parallels_file)
@@ -151,7 +162,7 @@ def update(name: str, parallel: str, session: str, log_file):
     :param log_file: file to log
     :return: None
     """
-    print('Updating {}({} from {})'.format(name, parallel, session), file=log_file)
+    # print('Updating {}({} from {})'.format(name, parallel, session), file=log_file)
     add_name(name)
     if name not in exists:
         last_update.append(get_id(name))
@@ -175,14 +186,23 @@ def print_update(bot: telegram.Bot):
                 name, parallels[exists[name][0]], sessions[exists[name][1]])]
         names_in_ids[name] = []
 
-    print('Answering to {} client'.format(str(len(new_information))), file=LOG_FILE)
+    print('Answering to {} client'.format(str(len(new_information))), file=LOG_FILE, flush=True)
     for id in new_information.keys():  # Clean all updates men
-        s = ''
-        to_delete = set()
+        s = 'Новая информация о поступивших:\n'
         for name, parallel, session in new_information[id]:
             s += '{} → {}({})\n'.format(names_list[name], parallel, session)
-            to_delete.add(name)
-        print('Sending message to {} with text:\n{}'.format(str(id), s), file=LOG_FILE)
+        print('Sending message to {} with text:\n{}'.format(str(id), s), file=LOG_FILE, flush=True)
         bot.send_message(id, s)
 
     last_update = []
+
+
+def get_list(id: int):
+    return clients_names.get(id, set())
+
+
+def get_information(name_id: int):
+    ret = '{} → Нет информации'.format(names_list[name_id])
+    if name_id in exists:
+        ret = '{} → {}({})'.format(names_list[name_id], parallels[exists[name_id][0]], sessions[exists[name_id][1]])
+    return ret

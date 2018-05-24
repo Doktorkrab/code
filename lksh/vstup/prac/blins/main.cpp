@@ -42,4 +42,14 @@ void run() {
     else cout << ans << '\n';
 }
 
+int main(){
+    int t = 1;
+#ifdef LOCAL
+    cin >> t;
+#else
+    ios::sync_with_stdio(0);
+    cout.tie(0), cin.tie(0);
+#endif
+    while(t--) run();
+}
 

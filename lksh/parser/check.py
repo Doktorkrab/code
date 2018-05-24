@@ -10,7 +10,7 @@ SESSION = '2018'
 
 def get_json():
     """
-    Get JSON with iformation
+    Get JSON with information
     :return: None
     """
     return json.loads(
