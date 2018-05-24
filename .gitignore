@@ -1,0 +1,20 @@
+# Ignore all
+*
+
+# Unignore all with extensions
+!*.*
+
+# Unignore all dirs
+!*/
+# vstup/
+*.in
+*.out
+*.txt
+*.stdin
+*.stdout
+*.stderr
+*.o
+*.a
+.idea/
+
+cmake*/
