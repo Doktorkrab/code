@@ -4,26 +4,18 @@ using namespace std;
 
 using ll = long long;
 
-const ll base_for_read = 1e1;
-const ll base_for_read_size = 1;
+const ll base = 1e9;
+const ll base_size = 9;
 
 
 struct Number {
     vector<ll> num;
     bool sign = 0;
-    ll base = base_for_read;
 
-//    ll base_size = base_for_read_size;
-    Number(const string &s_first) {
+    Number(const string &s) {
         vector<ll> tmp;
         string cur;
-        string s;
-        bool is_first = 1;
-        for (auto c : s_first) {
-            if (c != '0' || !is_first) s += c, is_first = 0;
-        }
-        if (!s.size()) s = '0';
-        int first_block = s.size() % base_for_read_size;
+        int first_block = s.size() % base_size;
         int pos = 0;
         if (first_block) {
             for (; pos < first_block; pos++) {
@@ -34,7 +26,7 @@ struct Number {
         }
         for (int i = pos; i < s.size(); i++) {
             cur += s[i];
-            if (cur.size() == base_for_read_size) {
+            if (cur.size() == base_size) {
                 tmp.push_back(stoul(cur));
                 cur = "";
             }
@@ -86,7 +78,7 @@ struct Number {
             cout << '-';
         }
         for (int i = Num.num.size() - 1; i >= 0; i--) {
-            if (i != Num.num.size() - 1) os << setw(base_for_read_size) << setfill('0') << abs(Num.num[i]);
+            if (i != Num.num.size() - 1) os << setw(base_size) << setfill('0') << abs(Num.num[i]);
             else os << Num.num[i];
         }
         return os;
@@ -205,16 +197,9 @@ int main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     cout.tie(0);
-    Number a, b, c;
-    cin >> a >> b >> c;
-    for (ll base = 2; base <= 2000; base++) {
-        a.base = base;
-        b.base = base;
-        Number d = a + b;
-        if (d == c) {
-            cout << base << '\n';
-            return 0;
-        }
-    }
-    cout << "0\n";
+    Number a;
+    Number b;
+    cin >> a >> b;
+    cout << a / b << '\n';
+
 }
