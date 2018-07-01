@@ -67,8 +67,19 @@ l:;,;okxodkOOOkxolllllox0KKKOkxkKXXK0kxolcclllc:,,,''','',cdO0Okdddxkkxxdx0XOocc
 lc:,;lddkOkkxxdollcclldOKKKOkdxOKXXK0kdolllollc;,,,'''''';cdkxdlcclodxkkxk0XOocllllodk0Odoollllcccc:
 lc:;;cok0OxxdollccccllxOKK0kddx0XXXKOxdolloool:;,,'''''',:oxdoc::cclloxkkO0XOolllllldk0Oxoollllcccc
 */
+const int MAX_MEM = 1e5;
+int mpos = 0;
+char mem[MAX_MEM];
 #include <bits/stdc++.h>
 using namespace std;
+inline void * operator new ( size_t n ) {
+    assert((mpos += n) <= MAX_MEM);
+    return (void *)(mem + mpos - n);
+}
+inline void operator delete ( void * ) noexcept { } // must have!
+#pragma GCC optimize("Ofast")
+#pragma GCC target("sse,sse2,sse3,ssse3,sse4,popcnt,abm,mmx")
+
 // TEMPLATE HERE
 
 using ll = long long;
@@ -99,7 +110,55 @@ void print(ostream& os, const Arg1& arg1, const Args&... args){
 
 // CODE HERE
 struct Solver{
-    Solver(){
+    vector<int> arr, sqrt_max, sqrt_cnt;
+    const int K = 318;
+    int n, k;
+    Solver() : sqrt_max(2000), sqrt_cnt(2000){
+        cin >> n;
+        arr.resize(n);
+        for (int& i : arr) cin >> i;
+        for (int i = 0;i < n;i++){
+            sqrt_max[i / K] = max(sqrt_max[i / K], arr[i]);
+        }
+        for (int i = 0;i < n;i++){
+            if (arr[i] == sqrt_max[i / K]) sqrt_cnt[i / K]++;
+        }
+        cin >> k;
+        for (int i = 0; i < k; i++){
+            int l, r;
+            cin >> l >> r;
+            --l, --r;
+            // print(cout, "l r", l, r);
+            int max_ = 0, cnt = 0, j = l;
+            for (; j <= r && j % K != 0; j++){
+                if (max_ < arr[j]){
+                    max_ = arr[j];
+                    cnt = 0;
+                }
+                if (max_ == arr[j]){
+                    cnt++;
+                }
+            }
+            // print(cout, "j after first", j);
+            for (; j / K < r / K; j  += K){
+                if (max_ < sqrt_max[j / K]){
+                    max_ = sqrt_max[j / K];
+                    cnt = 0;
+                }
+                if (max_ == sqrt_max[j / K]) cnt += sqrt_cnt[j / K];
+            }
+            // print(cout, "j after second", j);
+            for (; j <= r; j++){
+                if (max_ < arr[j]){
+                    max_ = arr[j];
+                    cnt = 0;
+                }
+                if (max_ == arr[j]){
+                    cnt++;
+                }
+            }
+            cout << max_ << ' ' << cnt << '\n';
+        }
 
     }   
 };

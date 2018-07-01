@@ -67,62 +67,116 @@ l:;,;okxodkOOOkxolllllox0KKKOkxkKXXK0kxolcclllc:,,,''','',cdO0Okdddxkkxxdx0XOocc
 lc:,;lddkOkkxxdollcclldOKKKOkdxOKXXK0kdolllollc;,,,'''''';cdkxdlcclodxkkxk0XOocllllodk0Odoollllcccc:
 lc:;;cok0OxxdollccccllxOKK0kddx0XXXKOxdolloool:;,,'''''',:oxdoc::cclloxkkO0XOolllllldk0Oxoollllcccc
 */
+
 #include <bits/stdc++.h>
+
 using namespace std;
-// TEMPLATE HERE
-
 using ll = long long;
-using ull = unsigned long long;
 using ld = long double;
-using pii = pair<int, int>;
-using pll = pair<ll, ll>;
+using ull = unsigned ll;
 using vi = vector<int>;
-#define MAX INT_MAX
-#define MIN INT_MIN
-#define all(x) (x).begin(), (x).end()
-#define forn(i, n) for (int i = 0;i < n;i++)
-#define ft first
-#define st second
-#define pb push_back
-
-void print(ostream& os){
-    os << "\n";
-}
-
-template <typename Arg1, typename... Args>
-void print(ostream& os, const Arg1& arg1, const Args&... args){
-    os << arg1 << " ";
-    print(os, args...);
-}
-
-// TEMPLATE END
-
-// CODE HERE
-struct Solver{
-    Solver(){
-
-    }   
-};
-
-// CODE END
-
+using vb = vector<bool>;
+#define vin(v) for (int& i : v) cin >> i;
+#define all(x) (x).begin, (x).end()
 int main(){
-    int t = 1;
-#ifdef LOCAL
-    assert(freopen("input.txt", "r", stdin));
-    cin >> t;
-#else
-    ios_base::sync_with_stdio(0);
-    cout.tie(0);
-#endif
-    while(t--){
-#ifdef LOCAL
-        clock_t t_elapsed = clock();
-#endif
-        Solver a;
-#ifdef LOCAL
-        cout << setprecision(5) << fixed <<"Elapsed: " << fabs(clock() - t_elapsed) / CLOCKS_PER_SEC << " sec.\n";
-#endif
-    }
+    vector<ll> kek = {1 ,
+2 ,
+3 ,
+4 ,
+5 ,
+6 ,
+7 ,
+8 ,
+9 ,
+11 ,
+22 ,
+33 ,
+44 ,
+55 ,
+66 ,
+77 ,
+88 ,
+99 ,
+111 ,
+222 ,
+333 ,
+444 ,
+555 ,
+666 ,
+777 ,
+888 ,
+999 ,
+1111 ,
+2222 ,
+3333 ,
+4444 ,
+5555 ,
+6666 ,
+7777 ,
+8888 ,
+9999 ,
+11111 ,
+22222 ,
+33333 ,
+44444 ,
+55555 ,
+66666 ,
+77777 ,
+88888 ,
+99999 ,
+111111 ,
+222222 ,
+333333 ,
+444444 ,
+555555 ,
+666666 ,
+777777 ,
+888888 ,
+999999 ,
+1111111 ,
+2222222 ,
+3333333 ,
+4444444 ,
+5555555 ,
+6666666 ,
+7777777 ,
+8888888 ,
+9999999 ,
+11111111 ,
+22222222 ,
+33333333 ,
+44444444 ,
+55555555 ,
+66666666 ,
+77777777 ,
+88888888 ,
+99999999 ,
+111111111 ,
+222222222 ,
+333333333 ,
+444444444 ,
+555555555 ,
+666666666 ,
+777777777 ,
+888888888 ,
+999999999 ,
+1111111111 ,
+2222222222 ,
+3333333333 ,
+4444444444 ,
+5555555555 ,
+6666666666 ,
+7777777777 ,
+8888888888 ,
+9999999999};
+    int n, m;
+    cin >> n >> m;
+    int ans = 0;
 
+    int l = 0, r = 0;
+
+    for(; l < kek.size() && kek[l] < n-m; ) ++l;
+    r = l;
+    for(; r < kek.size() && kek[r] <= n;) ++r;
+    cout << r-l;
 }

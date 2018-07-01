@@ -7,8 +7,7 @@ g = [[] for _ in range(n)]
 for i in range(m):
     v, u = map(lambda x: int(x) - 1, input().split())
     g[v].append((u, arr[v]))
-    g[u].append((v, arr[u]))
-
+    g[u].append((v, arr[u])
 heap = []
 heapq.heappush(heap, (0, 0))
 dp = [10 ** 18] * n
@@ -23,4 +22,5 @@ while len(heap):
         if dp[v] > dp[u] + arr[u]:
             dp[v] = dp[u] + arr[u]
             heapq.heappush(heap, (dp[v], v))
+heap.reverse()
 print(-1 if dp[n - 1] == 10 ** 18 else dp[n - 1])

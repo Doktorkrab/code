@@ -67,62 +67,34 @@ l:;,;okxodkOOOkxolllllox0KKKOkxkKXXK0kxolcclllc:,,,''','',cdO0Okdddxkkxxdx0XOocc
 lc:,;lddkOkkxxdollcclldOKKKOkdxOKXXK0kdolllollc;,,,'''''';cdkxdlcclodxkkxk0XOocllllodk0Odoollllcccc:
 lc:;;cok0OxxdollccccllxOKK0kddx0XXXKOxdolloool:;,,'''''',:oxdoc::cclloxkkO0XOolllllldk0Oxoollllcccc
 */
+
 #include <bits/stdc++.h>
+#define int long long
 using namespace std;
-// TEMPLATE HERE
-
 using ll = long long;
-using ull = unsigned long long;
 using ld = long double;
-using pii = pair<int, int>;
-using pll = pair<ll, ll>;
+using ull = unsigned ll;
 using vi = vector<int>;
-#define MAX INT_MAX
-#define MIN INT_MIN
-#define all(x) (x).begin(), (x).end()
-#define forn(i, n) for (int i = 0;i < n;i++)
-#define ft first
-#define st second
-#define pb push_back
+using vb = vector<bool>;
+using pll = pair<long, long>;
+#define vin(v) for (int& i : v) cin >> i;
+#define all(x) (x).begin, (x).end()
+#define pbc push_back
 
-void print(ostream& os){
-    os << "\n";
-}
-
-template <typename Arg1, typename... Args>
-void print(ostream& os, const Arg1& arg1, const Args&... args){
-    os << arg1 << " ";
-    print(os, args...);
-}
-
-// TEMPLATE END
-
-// CODE HERE
-struct Solver{
-    Solver(){
-
-    }   
-};
-
-// CODE END
-
-int main(){
-    int t = 1;
-#ifdef LOCAL
-    assert(freopen("input.txt", "r", stdin));
-    cin >> t;
-#else
-    ios_base::sync_with_stdio(0);
-    cout.tie(0);
-#endif
-    while(t--){
-#ifdef LOCAL
-        clock_t t_elapsed = clock();
-#endif
-        Solver a;
-#ifdef LOCAL
-        cout << setprecision(5) << fixed <<"Elapsed: " << fabs(clock() - t_elapsed) / CLOCKS_PER_SEC << " sec.\n";
-#endif
+signed main(){
+    int n;
+    cin >> n;
+    vi arr(n);
+    vin (arr);
+    vector<int> ans(n);
+    for (int i = 0;i < n;i++){
+        ans[i] = i + 1;
     }
-
+    int a = 0;
+    int vich = 0;
+    for (int i = 0;i < n;i++){
+        a += arr[i] - ans[i] - vich;
+        vich += arr[i] - ans[i] - vich;
+    }
+    cout << (a % 2 ? "First" : "Second") << '\n';
 }

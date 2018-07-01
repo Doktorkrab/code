@@ -67,62 +67,54 @@ l:;,;okxodkOOOkxolllllox0KKKOkxkKXXK0kxolcclllc:,,,''','',cdO0Okdddxkkxxdx0XOocc
 lc:,;lddkOkkxxdollcclldOKKKOkdxOKXXK0kdolllollc;,,,'''''';cdkxdlcclodxkkxk0XOocllllodk0Odoollllcccc:
 lc:;;cok0OxxdollccccllxOKK0kddx0XXXKOxdolloool:;,,'''''',:oxdoc::cclloxkkO0XOolllllldk0Oxoollllcccc
 */
+
 #include <bits/stdc++.h>
+#define int long long
 using namespace std;
-// TEMPLATE HERE
-
 using ll = long long;
-using ull = unsigned long long;
 using ld = long double;
-using pii = pair<int, int>;
-using pll = pair<ll, ll>;
+using ull = unsigned ll;
 using vi = vector<int>;
-#define MAX INT_MAX
-#define MIN INT_MIN
-#define all(x) (x).begin(), (x).end()
-#define forn(i, n) for (int i = 0;i < n;i++)
-#define ft first
-#define st second
-#define pb push_back
-
-void print(ostream& os){
-    os << "\n";
-}
-
-template <typename Arg1, typename... Args>
-void print(ostream& os, const Arg1& arg1, const Args&... args){
-    os << arg1 << " ";
-    print(os, args...);
-}
-
-// TEMPLATE END
-
-// CODE HERE
-struct Solver{
-    Solver(){
-
-    }   
+using vb = vector<bool>;
+using pll = pair<long, long>;
+#define vin(v) for (int& i : v) cin >> i;
+#define all(x) (x).begin, (x).end()
+#define pbc push_back
+struct Node{
+    int l, r, x, add = 0;
+    Node* left = nullptr;
+    Node* right = nullptr;
+    Node (int l, int r) : l(l), r(r), x(1) {}
 };
-
-// CODE END
-
-int main(){
-    int t = 1;
-#ifdef LOCAL
-    assert(freopen("input.txt", "r", stdin));
-    cin >> t;
-#else
-    ios_base::sync_with_stdio(0);
-    cout.tie(0);
-#endif
-    while(t--){
-#ifdef LOCAL
-        clock_t t_elapsed = clock();
-#endif
-        Solver a;
-#ifdef LOCAL
-        cout << setprecision(5) << fixed <<"Elapsed: " << fabs(clock() - t_elapsed) / CLOCKS_PER_SEC << " sec.\n";
-#endif
+const int MOD = 1000003;
+using nd = Node*;
+int safe(nd a){
+    return (a ? a->x : 1);
+}
+nd recalc(nd a){
+    a->x = (safe(a->left) * safe(a->right)) % MOD;
+    return nd;
+}
+vi arr;
+nd build(int l, int r){
+    nd rt = new Node(l, r);
+    if (r - l == 1){
+        rt->x = arr[l];
+        return rt;
     }
+    int m = (l + r) / 2;
+    rt->left = build(l, m);
+    rt->right = build(m, r);
+    return recalc(rt);
+}
 
+int get(nd a, int L, int R){
+    if (!a) return 1;
+    if (a->l >= R || L >= a->r) return 1;
+    if (L <= a->l && a->r <= R) return a->x;
+    return (get(a->left, L, R) * get(a->right, L, R)) % MOD;
+}
+signed main(){
+
+    cout << (a % 2 ? "First" : "Second") << '\n';
 }
