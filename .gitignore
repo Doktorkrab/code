@@ -15,6 +15,7 @@
 *.stderr
 *.o
 *.a
+*.out
 .idea/
-
+.vscode/
 cmake*/
