@@ -35,8 +35,7 @@ bool check(int m) {
                     tmp.second = 0;
                 }
                 dp[i][j] = max(dp[i][j], tmp);
-                if (dp[i][j].first >= l)
-                    return 1;
+                if (dp[i][j].first >= l) return 1;
             }
         }
     }
