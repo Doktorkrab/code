@@ -9,9 +9,6 @@ const int INF = 1e9;
 #endif
 
 // -*-*-* All variables *-*-*-
-vector<int> topsort;
-vector<int> is_good;
-vector<vector<int>> g;
 
 
 // -*-*-* All functions *-*-*-
@@ -23,7 +20,7 @@ void solve(){
 }
 int main(){
     #ifdef LOCAL
-    string taskName = "D";
+    string taskName = "";
     freopen((taskName + ".in").c_str(), "r", stdin);
     freopen((taskName + ".out").c_str(), "w", stdout);
     clock_t start = clock();
@@ -31,8 +28,8 @@ int main(){
     cin >> t;
     #else
     string taskName = "";
-    // freopen((taskName + ".in").c_str(), "r", stdin);
-    // freopen((taskName + ".out").c_str(), "w", stdout);
+    freopen((taskName + ".in").c_str(), "r", stdin);
+    freopen((taskName + ".out").c_str(), "w", stdout);
     int t = 1;
     #endif
     while(t--){

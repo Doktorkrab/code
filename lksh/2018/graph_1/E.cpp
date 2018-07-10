@@ -1,3 +1,72 @@
+/*
+:::::::c:::ccccccccclllllllllllllllllooloooooooooooooolodddddddooooddddddddddoodxxxxdddxxxxxxxxxxxxx
+:::::::::::ccccccccclllllllllllllooloolooooooooooooooolododddddddddddddddddddoodxxxxxxxxxxxxxxxxxxxx
+::cccccccccccccccccclllllllllllllollooooooooooooooooooooddddddddddddddddddddddodxxxxxxxxxxxxxxxxxxxx
+;:clccccccccccccccccllllllllllollloooooooooooooooodoooooddddddddddddddddddddddodxxxxxxxxxxxxxxxxxxxx
+:;:cccccccccccccccccllllllllllllllooooooooooooooooooooooddddddddddddddddddddddodxxxxxxxxxxxxxxxxxxxx
+:::::ccccccccccccccllllllllllllllllooooooooooooooooooooooddddddddddddddddddddooxxxxxxxxxxxxxxxxxxxxx
+::::::ccccccccccclccllllllllllloollooooooooooooooooodoooodddddddddddddddddddddoddddddddddddddddddddd
+:::::::ccccccccc::::::::ccccccccc::lloooooooooooooooooooooddddddddddddddddddddol:ccccccllllollllllc:
+::::::cccccccccc:,'';,,;,,;,,;,,;,,:looooooooooodoodddooooddddddddddddxxdddddooc;;::;;:;;:ccc::::::;
+:::::cccccccccccc:,',;,;;,;;,;;;;;,;cooooooodddddddddddoooddddddddddddxxxxxxdooc::cccccccclcccc:cc:;
+::::::cccccccccccc:;,,;,;;,;;,;;;;;,:looooooodddddddddddoodddddddddddxxxxxxxddo:;:::;;:::ccc::;;:;;;
+:::cccccccccccccccc:,',,;;;;;;;:;;;;;cooooooddddddddddddoodddddddddddxxxxxxxdolc:ccc::cccc::cc:cc:;:
+:c:::ccccccccccccccc:,,,;;;;;;;;;;;;,;looooooodddddddddddoddddddddddxxxxxxxxdol:;:::;;;;::;::;;:;;;o
+::::::ccccccccccclccc:;,;;;:;;:;::::;;cooooooodddddddddddoddddddddxxdxxxxxxxdol:::cccccccccccccc:;:x
+::::::::cccccccccclccc:;;;;;;;;;;;;;:;:looooooooodddddddddoddddddddddddddxxxddl::::::::::::::::::;lk
+::::::::ccccccccccclcccccclcclllllllllllloooooooooooddddddoodoc;,;clc:;;lddxddddddddddddddddddddddxk
+::::cccccccccccccccllllllllllllllooooooolooooooooooooolc:;,,;,..........':clooxxxxxxxxxxkkkkkkkkkxxk
+::::ccccccccccccccclllllllllllllllooooooooooooolc;;,'........ ..............';codxxxxxxxkkkkkkkkxxkk
+::::cccccccccccccccclllllllllllllllloooooooool;'...           .    ............',,;coxxxxxxkxkkkxxkk
+:::::cccccccccccccccllllllllllllllolloooooll:'.               .   .............''...,ldxxxxxxkkxxxkk
+:::::ccccccccccccccccclllllclllllllllloool:'.               .   ................,,'..,cdxxxxxxxxxxxx
+::::ccccccccccccccccccccllllllllllllllllc,..         .....     ................',,,''',:oxxxxxxdxxxx
+:::::ccccccccccccccccccllllllllllllllll:;'.        ...'....    ....''.........',,;,,,,',:ldxxxddxxxx
+:::::::cccccccccccccccclllllllllllllllc;'.       ....'''..........',;,,;;,,''''',;;,,'',;coxxdddxxxx
+::::::::ccccccccccccccccclllllllllllllc,.      ...'''''''.....'''',;:;;clodddlc:;,;;,,,;;coddddddddd
+:::::cccccccccccccccccccccllllllllllllc.    ....''''''',,,;;;:;;;;;;:::lodxkkkkkOxl:::;:::ldoooddooo
+::::ccccccccccccccccccccccllllllllllll:.   ..'''........',;::c:::::::::::::cllooxO00ko:;:clolloooooo
+:::cccccccccccccccccccccccclllllllllll:.   .','............',;;:::;;,,;;,,;:loxO0O0NWXo',cllllllllll
+::::::ccccccccccccccccccccccccllllcclc,.   .,'...'''''.......''',;,,,;::;;::cldxO00OOXk,':clllllllll
+ccc::::::cccccccccccccccc:::ccccccccc:'    .'..'''''''''''''''..'::cllc::::::cclxOKkckk;,:lcclllllcc
+::ccc::::ccccccccccccccccc:::ccccc::::.    ...'',,''''...'''',,,;loodolc;,,',::,;coocll,;cl::lcccccc
+;::::::::::::::::::cccccccc:;:cccc:::,.     ..'''...'......'''',:lodddolc::;;:::ccoxxxl;:lc:clcccccc
+,;:::::::::::::::::::ccccccc::ccc::::,.    ..','''''''''''''''',:okOOxolccllloodxk0KXWXd:ll:clc:c:::
+':ccccccccccc:,',,,;:ccccllccccccc:::;.   ..,,,''',,,,,,''''''',;lxOK0xl;;:clodxO0XNNWWKocl;:c::::::
+:cccccccccccc;'....;cllllllllllll:,'''..  .';,,,,,,,,,,,''..'',,;cdOKK0kl;;:coxk0KXXNWMNd:c:cc:::::;
+ccccccclllllllcccccllllllllllllll:;;,'..  .';,,,,,,,,,,,,'.',,,,;:lddooxo;,;:coxO0XNNWMWOcccc:::::;;
+;;;;;::::::::ccccccccllllllllloooooool;.. .';,,,,,,,,,,,,''''''',;:looll:,,;;:coxO0XNWWM0lclc:::::;;
+;;;;;;;;;;;;;;;;;;;;;;::::::::cccccccc:'. ..,,,,,,,,,;;;;,''..',;::coxkxl;,,,;:loxO0XWWMKoccc::::::;
+::::cccccccccccc:::::::::::::::::::::::;.. .,;,,,,,;;;;;;,'''',,;:ccodkOko;',,;cldkOKNWWOlccc:::::::
+ccccccccccccccccccclllcclllccclllllccccc:. .,;,,,;;;;;;;,,,,,,,,;;:cllloddc,,,;:coxOKXNWOc::::::::::
+ccccccllclllllccllllllllllllllllllllllllc' .';,;;;;;;;;;;,'................'',;cloxk0KNWk;;,,,,,,,,,
+ccccclllllllllllllllllllllllllllllllllllc' .',,;,,,;;;::;,...   ........';;'',;codkOOKNNd,;;,,,,,,''
+cccclllllllllllllllllllllllllllllllllllll:. .,,,,,,,,;;;''''...'',,;:cokOOkl;,;ldkkOOKNKl;::;;;,,,,,
+ccllllllllllllllllllllllllllllllllllllllll:'.',,,,,,,,,'.'',,,,,,;:cldk0KK0kl;;lxkOkOXNk::cc:;;;;,,,
+clllllllllllllllllllllllllllllllllllllllllol:;,,,,,,,,''''',,,,,;;;:cldkO0OOxlcoxkkk0NKl:c::::;;;;;,
+clllllllllllllllllllllllllllloollllllooolloool:,,,,,,,''''''''',,;;:cloxxkOOkdddkkkOKNOcokxdolc::;;;
+clllllllllllllllllllllllllllooollllloooolllc::;,,,,,''''''''''',,;:clodxxkO0Okkkxxk0XWKkkO0KXKK0Okxo
+ccllllllllllllllllllllllllllllllllllllc::;,,,,,;;,,,,''',''''''',;;:ldxxkkO0OkkxxkOKNWWX0000KKXXNNNN
+cclllllcclllllllllllllllllllllllcc::;;,,,,,,,,,::;;,,'''',,,,,',,;;;cloxkOOOkxxxkO0XWMMXOO000KKKKXNN
+ccccccclllllllllccccccccccc::::;;;;,,,,'',,,,';:cc::;,,,''',,,,,,;;;:lodxkkkxxxkO0XWMMMW0xO00000000K
+ccccccccccllcccccc::::::::::::;;;;,,,'',,,,''';::cccc:;,,,,,,,,;;;;::codddxdxxkOKNWMMMMMXxxO00OOOOOO
+cccccccccccccccccc:::::::::::;;;,,,''',;;,,''';::::cccc:;,,,,,,,;;;::clooddxxk0XWMMMMMMMXxldxOOkkkkk
+ccccccccc:cclllllcccccccccc::;;,,''',;;;;,''.';:::::::ccc::;;;;;;;:::cllooxk0XWMMMMMMMMMNxlodxkkkkkk
+ccccccccc:cllooollllllllllc:;;,,'',;:c::;,''',;::::::::ccccc::;;:;;::clox0XWWMMMMMMMMMMMNkooodxxkxxx
+ccccccc::clooddoooodddollc:;,,,,;cloollc:;,'',:cccccc:::::cccc:;:::cldxkKWWMMMWWMMMMMMMMWOolooddxxxx
+ccc::;;;:clddddxxxxxdolc:;;,,;:loxxxxddoc:,',;:cccccccccc::;;;;:lollcldOXWWMWWWWWWMMMMMMNOolooodddxx
+::;;;;;:cldxxxkkkkxdlc::;;;cldxkOOkkkkkxoc,',:ccccccc:;,,''',:cc::;,,'';lxKNWWWWWMMMMMMWN0dooooodddd
+:;;;;;;:odxkkkkkxdol::::codxkO000OO000Okdl;';:ccc::;;,'''',,;:::;;,,''..,;,;lx0NWMMWMMWWX0dllooooooo
+;;;;;;;lxkkkkkxdolcc:clook000KK0000KKK0kdl:,;cc;''',,''''',,;:cclllcc;',:,.'',;cokKNWWWNX0dllooooooo
+;;;;;,:okkOOkdollcccoxxolx0KKK000KKKXKOxol:;;:;;'..',,'''',,;:clodxxxxddlcclllc;;;cx0KXNX0dlllllllll
+;;;;;;cxOOOkdollcldxkxolokKKKK00KKXXX0kdlc:;,;::,...','''',;:cldxxkOOOOkdodo:;::cclk00kdkOdlllllcllc
+;;;;,:oO0OxdlllodxkkdllldOKKKK00KXXXK0kdlc:;;:::,'..',,''',;codkOOOOOkxdodk0xc:cccok0KOlclollllccccc
+:;;,;cx0OxolloxkOkxolllox0KKKKOO0XNXKOxollc::cc;,'...,,'',;coxkO0OOkxxddddkK0o::cloxOK0xolllllllcccc
+c;,,;lkOxoldxkOOkdolllldOKKKK0kk0XNX0Oxolc::ccc:,''..,,'',:lxO00OkxxxxddddOK0occllodk00kdoolllllccc:
+l:;,;okxodkOOOkxolllllox0KKKOkxkKXXK0kxolcclllc:,,,''','',cdO0Okdddxkkxxdx0XOoccllooxO0kdoolllllcccc
+lc:,;lddkOkkxxdollcclldOKKKOkdxOKXXK0kdolllollc;,,,'''''';cdkxdlcclodxkkxk0XOocllllodk0Odoollllcccc:
+lc:;;cok0OxxdollccccllxOKK0kddx0XXXKOxdolloool:;,,'''''',:oxdoc::cclloxkkO0XOolllllldk0Oxoollllcccc
+*/
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -11,65 +80,58 @@ struct Edge{
     string v, u;
     bool is_fake;
 };
+
 // -*-*-* All variables *-*-*-
+
 map<string, vector<int>> g;
 map<string, int> in_degree, out_degree;
-unordered_set<string> used;
-vector<char> ans[2];
+vector<char> ans;
 unordered_set<int> banned;
 unordered_set<string> was;
 vector<Edge> edges;
 int n;
+
 // -*-*-* All functions *-*-*-
+
 void init(){
     g.clear();
     in_degree.clear();
     out_degree.clear();
-    used.clear();
-    ans[0].clear();
-    ans[1].clear();    
+    ans.clear();
     banned.clear();
     edges.clear();
     was.clear();
 }
 
-int dfs(const string& v, bool flag = 1){
-    int was_fake = 0;
-    while(!g[v].empty()){
-        cerr << v << ' ' << edges[g[v].back()].u << ' ' << edges[g[v].back()].is_fake << '\n';
-        // for (int i : g[v]) cerr << i << ' ';
-        // cerr << '\n';
-        auto tmp = edges[g[v].back()].u;
-        auto tmp1 = edges[g[v].back()].is_fake;
+void dfs(const string& v){
+    while (g[v].size() != 0){
+        auto tmp = edges[g[v].back()];
         g[v].pop_back();
-        // cerr << v[1] << '\n';
-        was_fake |= dfs(tmp, !tmp1);
-        was_fake |= !tmp1;
+        dfs(tmp.u);
+        ans.push_back(tmp.u[1]);
     }
-    ans[was_fake].push_back(v[1]);
-    return was_fake;
-    // cerr << flag << ' ' << v[1] << '\n';
 }
+
 void solve(){
     init();
     cin >> n;
     unordered_set<string> substrs;
+
     for (int i = 0; i < n; i++){
         string tmp;
         cin >> tmp;
-        // cerr << tmp.substr(0, 2) << ' ' << tmp.substr(1, 2) << '\n';
         substrs.insert(tmp.substr(0, 2));
         substrs.insert(tmp.substr(1, 2));
+        
         g[tmp.substr(0, 2)].push_back(edges.size());
-        // cerr << edges.size() << '\n';
         in_degree[tmp.substr(1, 2)]++;
         out_degree[tmp.substr(0, 2)]++;
+
         edges.push_back({tmp.substr(0, 2), tmp.substr(1, 2), 0});
     }
-    // cerr << "here";
     string one = "--"s, minus_one = "--"s;
+    
     for (auto& i : substrs){
-        // cerr << i << ' ' << in_degree[i] << ' ' << out_degree[i] << '\n';
         if (in_degree[i] == out_degree[i]) continue;
         else if (one == "--" && (in_degree[i] - out_degree[i]) == 1){
             one = i;
@@ -82,41 +144,27 @@ void solve(){
             return;
         }
     }
-    cerr << one << '\n' << minus_one << '\n';
+    
     if ((one != "--") ^ (minus_one != "--")){
         cout << "NO\n";
         return;
     }
-    if (one != "--" && minus_one != "--"){
-        g[one].push_back(edges.size());
-        edges.push_back({one, minus_one, 1});
-    }
-    // cerr << minus_one << '\n';
+
     if (minus_one == "--") minus_one = g.begin()->first;
-    for (auto i : edges){
-        cout << i.v << ' ' << i.u << ' ' << i.is_fake << '\n';
-    }
     dfs(minus_one);
-    // ans.push_back(g.begin()->first[0]);
-    // reverse(ans.begin(), ans.end());
-    // ans.push_back(g.begin()->first[1]);
-    // for (int i : banned) cerr << i << ' ';
-    // cerr << '\n';
-    for (auto i : g){
+    
+    reverse(ans.begin(), ans.end());
+    for (auto& i : g){
         if (i.second.size() != 0){
             cout << "NO\n";
             return;
         }
     }
-    cout << "YES\n";
-    cout << minus_one[0];
-    for (char i : ans[0]) cout << i << ' ';
-    cout << '\n';
-    for (char i : ans[1]) cout << i << ' ';
-    cout << "\n";
-    // for (auto i : ans) cout << i;
-    // cout << '\n';    
 
+    cout << "YES\n";
+    cout << minus_one[0] << minus_one[1];
+    for (char c : ans) cout << c;
+    cout << '\n';
 }
 int main(){
     #ifdef LOCAL
