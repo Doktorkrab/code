@@ -102,6 +102,12 @@ void solve(){
             }
         }
     }
+    for (int i = 0; i < 2 * n; i++){
+        cout << i + 1 << ": \n   ";
+        for (int j : g_2sat[i]){
+            cout << j + 1 << ' ';
+        }
+    }
     for (int i = 0; i < 2 * n; i++) if (!used[i]) get_topsort(i);
     reverse(topsort.begin(), topsort.end());
     int cl = 0;
