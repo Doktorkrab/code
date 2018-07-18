@@ -9,7 +9,6 @@ using pii = pair<int, int>;
 using pll = pair<ll, ll>;
 using vi = vector<int>;
 const int MOD = 1e9;
-#define ALLOC
 
 #define MX MAX_INT
 #define MIX MIN_INT
@@ -19,16 +18,6 @@ const int MOD = 1e9;
 #define st second
 #define pb push_back
 
-#ifdef ALLOC
-const int MAX_MEM = 1e8;
-int mpos = 0;
-char mem[MAX_MEM];
-inline void * operator new ( size_t n ) {
-    assert((mpos += n) <= MAX_MEM);
-    return (void *)(mem + mpos - n);
-}
-inline void operator delete ( void * ) noexcept { }
-#endif
 
 // TEMPLATE END
 
@@ -91,7 +80,6 @@ struct Solver{
             int now;
             cin >> now;
             forn(j, k){
-                // cout << j << ' ' << now << ' ' << sum(nodes[j], now + 1, n + 5) << '\n';
                 insert(nodes[j + 1], now, sum(nodes[j], now + 1, n + 5) % MOD);
             }
         }
@@ -110,8 +98,6 @@ int main(){
 #else
     ios_base::sync_with_stdio(0);
     cout.tie(0);
-    freopen("kinverse.in", "r", stdin);
-    freopen("kinverse.out", "w", stdout);
 #endif
     while(t--){
 #ifdef LOCAL

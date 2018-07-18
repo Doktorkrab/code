@@ -22,12 +22,8 @@ int n, m, N;
 int get(int pos, int tl, int tr, int l, int r, int x) {
     if (tl >= r || l >= tr)
         return 0;
-    // cerr << pos << ' ' << tl << ' ' << tr << ' ' << l << ' ' << r << ' ' << x
-    // << '\n'; cerr << ' ' << (int)(lower_bound(t[pos].sorted.begin(),
-    // t[pos].sorted.end(), x) - t[pos].sorted.begin()) << '\n';
     if (l <= tl && tr <= r)
-        return (
-            int)(lower_bound(t[pos].sorted.begin(), t[pos].sorted.end(), x) -
+        return (int)(lower_bound(t[pos].sorted.begin(), t[pos].sorted.end(), x) -
                  t[pos].sorted.begin());
     int tm = (tl + tr) / 2;
     return get(2 * pos, tl, tm, l, r, x) + get(2 * pos + 1, tm, tr, l, r, x);

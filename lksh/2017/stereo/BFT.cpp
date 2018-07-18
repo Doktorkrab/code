@@ -18,9 +18,9 @@ struct Vector {
   Vector operator*(long double k) { return {x * k, y * k, z * k}; }
   Vector operator-(Vector& a) { return {x - a.x, y - a.y, z - a.z}; }
   Vector operator+(Vector& a) { return {x + a.x, y + a.y, z + a.z}; }
-  bool operator==(Vector a) { return tie(x, y, z) == tie(a.x, a.y, a.z); }
-  bool operator!=(Vector a) { return !((*this) == a); }
-  bool operator<(Vector a) { return tie(x, y, z) < tie(a.x, a.y, a.z); }
+  bool operator==(Vector a) const { return tie(x, y, z) == tie(a.x, a.y, a.z); }
+  bool operator!=(Vector a) const { return !((*this) == a); }
+  bool operator<(Vector a) const { return tie(x, y, z) < tie(a.x, a.y, a.z); }
   double len() { return sqrt((double)x * x + y * y + z * z); }
 
   void normalize() {

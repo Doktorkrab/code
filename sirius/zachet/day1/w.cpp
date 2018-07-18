@@ -119,7 +119,7 @@ int main(){
                     if (((1 << u) & new_mask) == 0) continue;
                     hist[dp[new_mask][u]] = 1;
                 }
-                for (mex = 1; hist[mex] == 1; mex++);
+                for (mex = 1; hist[mex] == 1; mex++) {}
                 for (int u : g[i]){
                     if (((1 << u) & new_mask) == 0) continue;
                     hist[dp[new_mask][u]] = 0;
