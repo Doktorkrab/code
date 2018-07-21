@@ -23,7 +23,6 @@ int ans[MAXN];
 int tin[MAXN];
 int tout[MAXN];
 int color[MAXN];
-int lst[MAXN];
 int timer = 0;
 Event events[MAXN];
 pair<int, int> segments[MAXN];
@@ -55,7 +54,6 @@ void dfs(int v){
 
 }
 void solve(){
-    fill(lst, lst + MAXN, -1);
     int root = -1;
     for (int i = 0; i < n; i++){
         int p, cl;
@@ -65,9 +63,11 @@ void solve(){
         color[i] = cl;
     }
     dfs(root);
+    unordered_map<int, int> lst;
     int nxt = 0;
     for (int i = 0;i < 2 * n; i++){
-        if (lst[arr[i]] != -1) insert(lst[arr[i]], -1);
+        cerr << arr[i] << ' ' << (lst.count(arr[i]) ? lst[arr[i]] : -1) << ' ' << i << '\n';
+        if (lst.count(arr[i])) insert(lst[arr[i]], -1);
         insert(i, 1);
         lst[arr[i]] = i;
         while (nxt < n && events[nxt].x <= i){
