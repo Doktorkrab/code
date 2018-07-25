@@ -14,76 +14,58 @@ void print(ostream& ot, const Arg& arg, const Args&... arg1){
 #define err(x) print(cerr, #x, x)
 
 #ifdef LOCAL
-const int INF = 100;
-const int MAXN = 10;
+const int INF = 101;
+const int MAXN = 2e5 + 1;
 #else
+const int MAXN = 2e5 + 1;
 #define err() ;
-const int MAXN = 4e6;
+
 const int INF = 1e9; 
 #endif
-
-const int MAXC = 1e6 + 1;
+const uint64_t MOD = 1500000001;
+const uint64_t BASE = 239;
+const uint64_t MOD_SQR = MOD * MOD;
 // -*-*-* All variables *-*-*-
-pair<int, int> segments[MAXN];
-int64_t cnt[MAXC];
-int arr[MAXN];
-int n, m;
-int BLOCK_SIZE = 2;
+uint64_t bases[MAXN + 1];
+unordered_map<int64_t, vector<int>> ans;
+string str[MAXN];
+int n, q;
+
 // -*-*-* All functions *-*-*-
 void init(){
-    memset(cnt, 0, sizeof(cnt));
-    memset(arr, 0, sizeof(arr));
-    fill(segments, segments + MAXN, make_pair(0, 0));
+    bases[0] = 1;
+    for (int i = 1; i < MAXN; i++) bases[i] = bases[i - 1] * BASE % MOD;
+    ans.clear();
 }
-bool cmp(pair<int, int> a, pair<int, int> b){
-    return make_pair(a.first / BLOCK_SIZE, a.second) < make_pair(b.first / BLOCK_SIZE, b.second);
+int calc_ans(const string& s, uint64_t hsh, int m){
+    const int n = s.size();
+    uint64_t hashes[n + 1];
+    hashes[0] = 0;
+    for (int i = 0; i < n; i++) hashes[i + 1] = (hashes[i] * BASE) % MOD + s[i];
+    auto get_hash = [&](int l, int r){ return ((hashes[r] + MOD_SQR - (hashes[l] * bases[r - l]) % MOD) % MOD); }; // [l;r)
+    for (int i = 0; i + m <= n; i++){
+        if (get_hash(i, i + m) == hsh) return 1;
+    }
+    return 0;
 }
 void solve(){
     init();
-    for (int i = 0; i < n; i++) cin >> arr[i];
-    for (int i = 0; i < m; i++){
+    for (int i = 0; i < n; i++){
+        cin >> str[i];
+    }
+    for (int i = 0; i < q; i++){
         int l, r;
-        cin >> l >> r;
-        segments[i] = {--l, --r};
-        // cerr << segments[i].first << ' ' << segments[i].second << '\n';
+        string t;
+        cin >> l >> r >> t;
+        uint64_t hsh = 0;
+        int m = t.size();
+        for (int i = 0; i < m; i++) hsh = (hsh * BASE) % MOD + t[i];
+        if (!ans.count(hsh)){
+            for (int i = 0; i < n; i++) if (calc_ans(str[i], hsh, m)) ans[hsh].push_back(i);
+            sort(ans[hsh].begin(), ans[hsh].end());
+        }
+        print(cout, upper_bound(ans[hsh].begin(), ans[hsh].end(), r - 1) - lower_bound(ans[hsh].begin(), ans[hsh].end(), l - 1));
     }
-    sort(segments, segments + m, cmp);
-    int l = 0, r = 0;
-    cnt[arr[0]] = 1;
-    int64_t ans = arr[0];
-    for (int i = 0; i < m ; i++){
-        // print(cerr, l, r, segments[i].first, segments[i].second);
-        while (r < segments[i].second){
-            // print(cerr, l, r, segments[i].first, segments[i].second, "down r");            
-            r++;
-            ans -= cnt[arr[r]] * cnt[arr[r]] * arr[r];
-            cnt[arr[r]]++;
-            ans += cnt[arr[r]] * cnt[arr[r]] * arr[r];
-        }
-        while (r > segments[i].second){
-            // print(cerr, l, r, segments[i].first, segments[i].second, "up r");            
-            ans -= cnt[arr[r]] * cnt[arr[r]] * arr[r];
-            cnt[arr[r]]--;
-            ans += cnt[arr[r]] * cnt[arr[r]] * arr[r];
-            --r;
-        }
-        while (l < segments[i].first){
-            // print(cerr, l, r, segments[i].first, segments[i].second, "up l");            
-            ans -= cnt[arr[l]] * cnt[arr[l]] * arr[l];
-            cnt[arr[l]]--;
-            ans += cnt[arr[l]] * cnt[arr[l]] * arr[l];
-            l++;
-        }
-        while (l > segments[i].first){
-            // print(cerr, l, r, segments[i].first, segments[i].second, "down l");            
-            l--;
-            ans -= cnt[arr[l]] * cnt[arr[l]] * arr[l];
-            cnt[arr[l]]++;
-            ans += cnt[arr[l]] * cnt[arr[l]] * arr[l];
-        }
-        cout << ans << '\n';
-    }
-    
 }
 int main(){
     #ifdef LOCAL
@@ -96,7 +78,7 @@ int main(){
     // freopen((taskName + ".in").c_str(), "r", stdin);
     // freopen((taskName + ".out").c_str(), "w", stdout);
     #endif
-    while(cin >> n >> m){
+    while(cin >> n >> q){
         solve();
         #ifdef LOCAL
         cerr << "Elapsed " << setprecision(4) << fixed << (clock() - start * 1.) / CLOCKS_PER_SEC << '\n';

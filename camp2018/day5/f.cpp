@@ -26,7 +26,11 @@ void build_bases(vector<ull>& bases, int gg, int m){
 ull get_hash(vector<ull>& h, vector<ull>& bases, int l, int r, ull m){
     return (h[r + 1] + m - (h[l] * bases[r - l + 1]) % m) % m;
 }
-  
+bool cmp(ull a, ull b){
+    ull lcp = bin_search(a, b);
+    if (lcp == min(n - a, n - b)) return a > b;
+    return s[a + lcp] < s[b + lcp];
+} 
 int main(){
     freopen("common.in", "r", stdin);
     freopen("common.out", "w", stdout);

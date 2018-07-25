@@ -7,7 +7,25 @@ const int INF = 100;
 #else
 const int INF = 1e9; 
 #endif
+struct Point{
+    ll x, y;
+    ll vector_product(const Point& a) const {
+        return x * a.y - a.x * y;
+    }
+    
+    friend istream& operator>>(istream& is, Point& a){
+        in >> a.x >> a.y;
+        return in;
+    }
+    friend ostream& operator<<(ostream& ot, const Point& a){
+        ot << a.x << ' ' << a.y;
+        return ot;
+    }
 
+    bool operator< (const Point& a){
+        return vector_product(a) > 0;
+    }
+};
 // -*-*-* All variables *-*-*-
 
 

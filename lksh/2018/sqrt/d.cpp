@@ -18,75 +18,84 @@ const int INF = 100;
 const int MAXN = 10;
 #else
 #define err() ;
-const int MAXN = 4e6;
+const int MAXN = 2e5 + 1;
 const int INF = 1e9; 
 #endif
 
 const int MAXC = 1e6 + 1;
 // -*-*-* All variables *-*-*-
-pair<int, int> segments[MAXN];
-int64_t cnt[MAXC];
-int arr[MAXN];
-int n, m;
-int BLOCK_SIZE = 300;
-struct Event{
+struct Segment{
     int l, r, id;
 };
+Segment segments[MAXN];
+int64_t cnt[MAXC];
+int arr[MAXN];
+int64_t segments_ans[MAXN];
+int n, m;
+int BLOCK_SIZE = 256;
 // -*-*-* All functions *-*-*-
 void init(){
     memset(cnt, 0, sizeof(cnt));
-    memset(arr, 0, sizeof(arr));
-    fill(segments, segments + MAXN, make_pair(0, 0));
+    memset(segments_ans, 0, sizeof(segments_ans));
 }
-bool cmp(pair<int, int> a, pair<int, int> b){
-    return make_pair(a.first / BLOCK_SIZE, a.second) < make_pair(b.first / BLOCK_SIZE, b.second);
+bool cmp(Segment a, Segment b){
+    if (a.l / BLOCK_SIZE == b.l / BLOCK_SIZE){
+        if ((a.l / BLOCK_SIZE) % 2) return a.r > b.r;
+        return a.r < b.r;
+    }
+    return a.l / BLOCK_SIZE < b.l / BLOCK_SIZE;
 }
 void solve(){
-    init();
+    // init();
     for (int i = 0; i < n; i++) cin >> arr[i];
     for (int i = 0; i < m; i++){
         int l, r;
         cin >> l >> r;
-        segments[i] = {--l, --r};
+        segments[i] = {--l, --r, i};
         // cerr << segments[i].first << ' ' << segments[i].second << '\n';
     }
     sort(segments, segments + m, cmp);
-    int l = 0, r = -1;   int64_t ans = 0;
+    int l = 0, r = -1;   
+    int64_t ans = 0;
     for (int i = 0; i < m ; i++){
         // print(cerr, l, r, segments[i].first, segments[i].second);
-        while (r < segments[i].second){
+        while (r < segments[i].r){
             // print(cerr, l, r, segments[i].first, segments[i].second, "down r");            
             r++;
             ans -= cnt[arr[r]] * cnt[arr[r]] * arr[r];
             cnt[arr[r]]++;
             ans += cnt[arr[r]] * cnt[arr[r]] * arr[r];
         }
-        while (r > segments[i].second){
+        while (r > segments[i].r){
             // print(cerr, l, r, segments[i].first, segments[i].second, "up r");            
             ans -= cnt[arr[r]] * cnt[arr[r]] * arr[r];
             cnt[arr[r]]--;
             ans += cnt[arr[r]] * cnt[arr[r]] * arr[r];
             --r;
         }
-        while (l < segments[i].first){
+        while (l < segments[i].l){
             // print(cerr, l, r, segments[i].first, segments[i].second, "up l");            
             ans -= cnt[arr[l]] * cnt[arr[l]] * arr[l];
             cnt[arr[l]]--;
             ans += cnt[arr[l]] * cnt[arr[l]] * arr[l];
             l++;
         }
-        while (l > segments[i].first){
+        while (l > segments[i].l){
             // print(cerr, l, r, segments[i].first, segments[i].second, "down l");            
             l--;
             ans -= cnt[arr[l]] * cnt[arr[l]] * arr[l];
             cnt[arr[l]]++;
             ans += cnt[arr[l]] * cnt[arr[l]] * arr[l];
         }
-        cout << ans << '\n';
+        segments_ans[segments[i].id] = ans;
     }
+    for (int i = 0; i < m; i++) cout << segments_ans[i] << '\n';
     
 }
 int main(){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
     #ifdef LOCAL
     string taskName = "e";
     freopen((taskName + ".in").c_str(), "r", stdin);
