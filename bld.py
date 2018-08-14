@@ -2,7 +2,8 @@
 import os
 from sys import argv
 
-CPP_ARGS = ['-DLOCAL', '-pedantic', '-Wall', '-Wextra', '-std=c++14']
+CPP_ARGS = ['-DLOCAL', '-pedantic', '-Wall', '-Wextra', '-std=c++14', 
+'-D_GLIBCXX_DEBUG']
 
 
 argv = argv[1:]

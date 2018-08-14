@@ -22,30 +22,28 @@ const int INF = 1e9;
 #endif
 
 // -*-*-* All variables *-*-*-
+int n, m;
+int64_t ans = 0;
 
 // -*-*-* All functions *-*-*-
 void init(){
-
+    ans = 0;
 }
 
 void solve(){
+    while (--m){
+        int64_t x, m;
+        cin >> x >> d;
 
+    }
 }
 int main(){
     #ifdef LOCAL
-    string taskName = "";
-    freopen((taskName + ".in").c_str(), "r", stdin);
-    freopen((taskName + ".out").c_str(), "w", stdout);
     clock_t start = clock();
-    #else
-    string taskName = "";
-    // freopen((taskName + ".in").c_str(), "r", stdin);
-    // freopen((taskName + ".out").c_str(), "w", stdout);
     #endif
-    while(cin){
-        solve();
-        #ifdef LOCAL
-        cerr << "Elapsed " << setprecision(4) << fixed << (clock() - start * 1.) / CLOCKS_PER_SEC << '\n';
-        #endif
-    }
+    cin >> n >> m;
+    solve();
+    #ifdef LOCAL
+    cerr << "Elapsed " << setprecision(4) << fixed << (clock() - start * 1.) / CLOCKS_PER_SEC << '\n';
+    #endif
 }

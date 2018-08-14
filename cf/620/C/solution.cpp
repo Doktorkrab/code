@@ -33,14 +33,7 @@ void solve(){
 }
 int main(){
     #ifdef LOCAL
-    string taskName = "";
-    freopen((taskName + ".in").c_str(), "r", stdin);
-    freopen((taskName + ".out").c_str(), "w", stdout);
     clock_t start = clock();
-    #else
-    string taskName = "";
-    // freopen((taskName + ".in").c_str(), "r", stdin);
-    // freopen((taskName + ".out").c_str(), "w", stdout);
     #endif
     while(cin){
         solve();
