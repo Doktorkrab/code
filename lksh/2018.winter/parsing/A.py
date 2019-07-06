@@ -1,0 +1,1 @@
+print((lambda x: 'for (int {} = 0; {} < {}; ++{}) '.format(x.group(1), x.group(1), x.group(2), x.group(1)) + '{')(__import__("re").match('for ([a-zA-Z]{1,10}) in range\(([0-9]+)\):', input())))

@@ -1,5 +1,4 @@
 import random
-2
 
 def gcd(a, b):
     return a if not b else gcd(b, a % b)

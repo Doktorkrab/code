@@ -49,6 +49,7 @@ void build(){
     // cerr << "build\n";
     sparse.assign(MAXLOG, vector<pair<int, int>>(euler.size(), MAX));
     sparse[0] = euler;
+    cout << "0:
     for (int log = 1; log < MAXLOG; log++){
         for (int i = 0; i + (1 << (log - 1)) < (int)(euler.size()); i++){
             sparse[log][i] = min(sparse[log - 1][i], sparse[log - 1][i + (1 << (log - 1))]);

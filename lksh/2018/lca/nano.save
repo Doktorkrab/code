@@ -1,0 +1,12 @@
+a1x+b1y+c=0
+a2x+b2y+c=0
+
+a1a2x+a2b1y+a2c1=0
+a1a2x+b2a1y+a1c2=0
+
+(a2b1-b2a1)+a2c1-a1c2=0
+
+a1b2x+b1b2y+b2c1=0
+a2b1x+b1b2y+b1c2=0
+
+(a1b2-a2*b1)=b1*c2-b2*c1

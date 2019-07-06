@@ -46,9 +46,7 @@ bool is_anc(int a, int b){
 
 int lca(int a, int b){
     if (is_anc(a, b)) return a;
-    // cerr << a << ' ' << b << '\n';
     for (int i = MAXLOG - 1; i >= 0; i--){
-        // cerr << a << ' ' << b << ' ' << bin_up[a][i] << ' ' << i << '\n';
         int v = bin_up[a][i];
         if (!is_anc(v, b)) a = v;
     }
