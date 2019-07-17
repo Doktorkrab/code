@@ -75,8 +75,8 @@ inline void solve(){
 
 int main(){
 	#ifdef LOCAL
-		freopen("C.in", "r", stdin);
-		freopen("C.out", "w", stdout);
+		freopen("A.in", "r", stdin);
+		freopen("A.out", "w", stdout);
 	#endif
 	
     ios::sync_with_stdio(0);

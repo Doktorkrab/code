@@ -17,11 +17,16 @@
 #include <ctime>
 #include <bitset>
 #include <complex>
+#include <numeric>
 
 using namespace std;
 
 string to_string(const string& s){
     return s;
+}
+template<typename T, typename S>
+string to_string(const pair<T, S>& x){
+    return "(" + to_string(x.first) + ", " + to_string(x.second) + ")";
 }
 template<typename T>
 string to_string(const vector<T>& vec){
@@ -63,20 +68,50 @@ void prn(const T& t, const Ts&... ts){
 #endif
 
 int n;
-
 inline void init(){
 
 }
-
 inline void solve(){
-
+    int ans = 0;
+    set<vector<pair<int, int>>> hh;
+    for (int mask = 0; mask < (1LL << (n * (n + 1))); mask++){
+        vector<pair<int, int>> pairs;
+        for (int i = 0; i < n; i++){
+            for (int j = 0; j < n; j++){
+                if (__gcd(i + 1, j + 1) != 1 || i >= j)
+                    continue;
+                if ((mask & (1 << (n + 1) * i)) && (mask & (1 << ((n + 1) * i + j + 1))))
+                    pairs.emplace_back(i + 1, j + 1);
+            }
+        }
+        bool fl = 0;
+        if (pairs.empty())
+            continue;
+        sort(pairs.begin(), pairs.end());
+        if (hh.count(pairs) || pairs.empty())
+            continue;
+        // prn(pairs, hh.count(pairs));
+        hh.insert(pairs);
+        for (int x = 2; x <= n; x++){
+            bool flag = 1;
+            for (auto [a, b] : pairs)
+                flag &= (a < x && b < x) || (a >= x && b >= x);
+            fl |= flag;
+            // cout << flag << ' ' << x << '\n';
+        }
+        if (!fl){
+            ans++;
+        }
+    }
+    cout << ans << ", ";
+    cerr << n << '\n';
 }
 
 
 int main(){
 	#ifdef LOCAL
-		freopen("C.in", "r", stdin);
-		freopen("C.out", "w", stdout);
+		freopen("B.in", "r", stdin);
+		freopen("B.out", "w", stdout);
 	#endif
 	
     ios::sync_with_stdio(0);

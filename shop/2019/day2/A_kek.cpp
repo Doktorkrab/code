@@ -20,23 +20,20 @@
 
 using namespace std;
 
-string to_string(const string& s){
-    return s;
+void to_string(const string& s){
+    cout << s;
 }
 template<typename T>
-string to_string(const vector<T>& vec){
-    string res;
-    res += '{';
+void to_string(const vector<T>& vec){
+    cout << '{';
     bool is_first = 1;
     for (const T& i : vec){
         if (!is_first)
-            res += ", ";
-        res += to_string(i);
+            cout << ", ";
+        cout << to_string(i);
     }
-    res += '}';
-    return res;
+    cout << '}';
 }
-
 void prn(){
     cout << '\n';
 }
@@ -46,42 +43,38 @@ void prn(const T& t, const Ts&... ts){
     prn(ts...);
 
 }
-#ifdef DEBUG
-    template<typename T, typename... Ts>
-    void deb() {}
-    template<typename T, typename... Ts>
-    void deb(const T& t, const Ts&... ts){}
-#else
-    void deb(){
-        cerr << '\n';
-    }
-    template<typename T, typename... Ts>
-    void deb(const T& t, const Ts&... ts){
-        cerr << to_string(t) << ' ';
-        deb(ts...);
-    }
-#endif
-
-int n;
-
+#define int int64_t
+int n, m;
+const int MAXN = 1e5 + 7;
+int arr[MAXN], arr1[MAXN];
 inline void init(){
 
 }
 
 inline void solve(){
-
+    int ans = 0;
+    for (int i = 0; i < n; i++)
+        cin >> arr[i];
+    for (int i = 0; i < n; i++){
+        cin >> arr1[i];
+    }
+    sort(arr, arr + n);
+    sort(arr1, arr1 + n);
+    for (int i = 0; i < n; i++)
+        ans = max(ans, abs(arr[i] - arr1[i]));
+    cout << ans << '\n';
 }
 
 
-int main(){
+int32_t main(){
 	#ifdef LOCAL
-		freopen("C.in", "r", stdin);
-		freopen("C.out", "w", stdout);
+		freopen("A_kek.in", "r", stdin);
+		freopen("A_kek.out", "w", stdout);
 	#endif
 	
     ios::sync_with_stdio(0);
     cin.tie(0), cout.tie(0);
-    while (cin >> n)
+    while (cin >> n >> m)
         solve();
 
 }
